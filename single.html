@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Math Experience</title>
+    <link rel="icon" type="image/jpg" href="/math.jpg">
+    <script type="text/javascript">
+function openInBlank() {
+    const content = `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>The funny site</title>
+  <link rel="icon" type="image/jpeg" href="/niko.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    body {
+      text-align: center;
+      background: linear-gradient(rgb(71, 223, 237), rgb(40, 150, 161), rgb(71, 223, 237));
+      color: darkblue;
+      font-family: 'Press Start 2P', system-ui;
+    }
+    h1 {
+      text-shadow: midnightblue 9px 3px 5px;
+      transition: color 0.3s ease-in-out, font-size 0.3s ease-in-out;
+    }
+    h1:hover {
+      color: royalblue;
+      transform: rotate(360deg);
+      font-size: 40px;
+    }
+    h3 {
+      text-shadow: midnightblue 9px 3px 5px;
+    }
+    button {
+      background: linear-gradient(gray, darkblue);
+      color: white;
+      border: 1px solid darkblue;
+      border-radius: 4px;
+      padding: 12px;
+      margin: 8px;
+      font-size: 14px;
+      font-family: 'Press Start 2P', system-ui;
+      cursor: pointer;
+      width: 30%;
+    }
+    button:hover {
+      background: linear-gradient(darkblue, navy);
+    }
+    section {
+      border: 5px dotted black;
+      transform: scale(0.95);
+      transition: all 0.65s ease-in-out;
+      margin: 20px auto;
+      width: 90%;
+    }
+    section:hover {
+      box-shadow: 0 0 50px white;
+      transform: scale(1.05);
+    }
+    #playArea {
+      margin: 12px auto;
+      width: 90%;
+      height: 65vh;
+      border: 2px solid darkblue;
+      display: none;
+    }
+    #gameFrame {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .close-btn {
+      margin: 12px;
+      padding: 8px 12px;
+      background: linear-gradient(lightblue, royalblue);
+      color: white;
+      border: 1px solid darkblue;
+      border-radius: 4px;
+      cursor: pointer;
+      font-family: 'Press Start 2P', system-ui;
+      font-size: 10px;
+    }
+    #closeGameBtn {
+      display: none;
+    }
+    #ccModal, #erModal, #adModal, #kbModal, #brModal, #blModal, #ckModal, #jdModal, #ukModal, #sbModal, #spModal, #biModal, #rbModal, #tsModal, #dmModal, #mcModal, #mdModal, #reModal, #drModal, #csModal, #f1Modal, #f2Modal, #f3Modal, #f4Modal, #bbModal, #rcModal, #feModal, #dbModal, #uyModal, #srModal, #prModal, #dhModal, #nbModal, #d2Modal, #pbModal, #acModal, #bdModal, #btModal, #asModal, #dlModal, #buModal, #clModal, #hkModal, #teModal, #thModal, #hrModal, #isModal, #ptModal, #f5Modal, #smModal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.8);
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+    .gameWrap {
+      width: 92%;
+      max-width: 1100px;
+      height: 82vh;
+      background: #111;
+      border: 2px solid #036;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .gameHeader {
+      padding: 10px 12px;
+      background: linear-gradient(#ccc, #669);
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
+    .gameHeader button {
+      width: auto;
+      padding: 8px 12px;
+      font-size: 10px;
+    }
+    .gameModal {
+      flex: 1;
+      overflow: hidden;
+    }
+    .gameModal iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    /* Navigation bar container */
+.navbar {
+  background-color: #333;
+  padding: 1rem;
+}
+
+/* Flexbox list for horizontal layout */
+.nav-links {
+  list-style: none; /* Removes bullets */
+  display: flex;
+  gap: 20px; /* Space between links */
+  margin: 0;
+  padding: 0;
+}
+
+/* Link styling */
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  transition: 0.3s; /* Smooth hover effect */
+}
+
+/* Hover effect */
+.nav-links a:hover {
+  color: lightblue; /* Green highlight */
+}
+
+  <\/style>
+<\/head>
+<body>
+<nav class="navbar">
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="random.html">Random Page</a></li>
+    <li><a href="log.html"> Update logs </a></li>
+  </ul>
+</nav>
+
+  <h1>"Seal Spinning" <\/h1>
+  <h1>this is just a cool site, have fun share with your friends.<\/h1>
+  <h2>Trying to add 2 games a day. <\/h2>
+  <p>search bar? never heard of it<\/p>
+  
+  <section>
+    <!-- ADD NEW GAME BUTTON HERE (example: <button id="btnFlappy" data-game="fl">Flappy Bird</button>) -->
+    <button id="btnBasketball">Basketball<\/button>
+    <button id="btnSeraph">Seraph<\/button>
+    <button id="btnEscape" data-game="er">Escape Road<\/button>
+    <button id="btnCrazy" data-game="cc">Crazy Cars<\/button>
+    <button id="btnAdofai" data-game="ad">A Dance of Fire and Ice<\/button>
+    <button id="btnKart" data-game="kb">Kart Bros<\/button>
+    <button id="btnBasketRandom" data-game="br">Basketball Random<\/button>    <button id="btnBalatro" data-game="bl">Balatro</button>
+    <button id="btnCookie" data-game="ck">Cookie Clicker</button>
+    <button id="btnJelly" data-game="jd">Jelly Drift</button>
+    <button id="btnUltrakill" data-game="uk">Ultrakill</button>  
+    <button id="btnSandBoxels" data-game="sb">SandBoxels</button>
+    <button id="btnSpaceWaves" data-game="sp">Space Waves<\/button>
+    <button id="btnBindingOfIsaac" data-game="bi">Binding Of Isaac<\/button>
+    <button id="btnRedBall4" data-game="rb">Red Ball 4<\/button>
+    <button id="btntownscaper" data-game="ts">Townscaper<\/button>
+    <button id="btnDriveMad" data-game="dm">Drive Mad<\/button>
+    <button id="btnMinecraft" data-game="mc">Minecraft<\/button>
+    <button id="btn10MinutesTillDawn" data-game="md">10 Minutes Till dawn<\/button>
+    <button id="btnRetroBowl" data-game="re">Retro Bowl<\/button>
+    <button id="btnDeltarune" data-game="dr">Deltarune<\/button>
+    <button id="btnClubby The Seal" data-game="cs">Clubby The Seal<\/button>
+    <button id="btnfnaf1" data-game="f1">Fnaf 1<\/button>
+    <button id="btnfnaf2" data-game="f2">Fnaf 2<\/button>
+    <button id="btnfnaf3" data-game="f3">Fnaf 3<\/button>
+    <button id="btnfnaf4" data-game="f4">Fnaf 4<\/button>
+    <button id="btnBaldisBasics" data-game="bb">Baldis Basics<\/button>
+    <button id="btnRaldisCrackhouse" data-game="rc">Raldis Crackhouse<\/button>
+    <button id="btnFNAE" data-game="fe">FNAE<\/button>
+    <button id="btnDriftBoss" data-game="db">Drift Boss<\/button>
+    <button id="btnUndertaleYellow" data-game="uy">Undertale Yellow<\/button>
+    <button id="btnSnowRider" data-game="sr">Snow Rider<\/button>
+    <button id="btnHelios" data-game="pr">Helios (proxy)<\/button>
+    <button id="btnDriftHunters" data-game="dh">Drift Hunters (takes a while to load)<\/button>
+    <button id="btnNutsandBolts" data-game="nb">Nuts and Bolts screwing game<\/button>
+    <button id="btnDogeMiner2" data-game="d2">Dogeminer 2<\/button>
+    <button id="btnPinball" data-game="pb">Pinball<\/button>
+    <button id="btnAdventureCapitalists" data-game="ac">Adventure Capitalists<\/button>
+    <button id="btnBaconMayDie" data-game="bd">Bacon May Die<\/button>
+    <button id="btnBadTimeSimulator" data-game="bt">Bad Time Simulator<\/button>
+    <button id="btnAmazingStrangeRopePolice" data-game="as">Amazing Strange Rope Police (slow and buggy may freeze)<\/button>
+    <button id="btnDuckLifeSpace" data-game="dl">Duck Life Space<\/button>
+    <button id="btnBuckshotRoulette" data-game="bu">Buckshot Roulette (takes a while to load)<\/button>
+    <button id="btnCloverpit" data-game="cl">Clover Pit<\/button>
+    <button id="btnHollowKnight" data-game="hk">Hollow Knight<\/button>
+    <button id="btnTerraria" data-game="te">Terraria<\/button>
+    <button id="btnThatsNotMyNeighbor" data-game="th">Thats Not My Neighbor<\/button>
+    <button id="btnHighwayRacer" data-game="hr">Highway Racer<\/button>
+    <button id="btnIronSnout" data-game="is">Iron Snout<\/button>
+    <button id="btnPolyTrack" data-game="pt">Poly Track<\/button>
+    <button id="btnFNAE2" data-game="f5">FNAE 2<\/button>
+    <button id="btnStakeMines" data-game="sm">Stake Mines<\/button>
+    <!-- ↑ ADD NEW BUTTONS ABOVE THIS LINE (Keep data-game matching the key in games object) -->
+  <\/section>
+
+  <button id="closeGameBtn" class="close-btn">Close Game<\/button>
+  <div id="playArea"><iframe id="gameFrame"><\/iframe><\/div>
+
+  <h3>updated some text, i forgot to add 2.6, so were on v2.7 ill add a site with all updates (no previous versions avaliable)<\/h3>
+
+  <!-- ADD NEW GAME MODALS HERE (example: <div id="flModal"><div class="gameWrap"><div class="gameHeader"><div>Flappy Bird</div><div><button class="fullscreenBtn" data-modal="fl">Fullscreen</button><button class="closeBtn" data-modal="fl">Close</button></div></div><div class="gameModal"><iframe class="gameIframe" data-modal="fl"></iframe></div></div></div>) -->
+
+  <div id="ccModal"><div class="gameWrap"><div class="gameHeader"><div>Crazy Cars<\/div><div><button class="fullscreenBtn" data-modal="cc">Fullscreen<\/button><button class="closeBtn" data-modal="cc">Close<\/button><\/div><\/div><div class="gameModal"><iframe class="gameIframe" data-modal="cc"><\/iframe><\/div><\/div><\/div>
+
+  <div id="adModal"><div class="gameWrap"><div class="gameHeader"><div>A Dance of Fire and Ice<\/div><div><button class="fullscreenBtn" data-modal="ad">Fullscreen<\/button><button class="closeBtn" data-modal="ad">Close<\/button><\/div><\/div><div class="gameModal"><iframe class="gameIframe" data-modal="ad" allowfullscreen><\/iframe><\/div><\/div><\/div>
+
+  <div id="kbModal"><div class="gameWrap"><div class="gameHeader"><div>Kart Bros<\/div><div><button class="fullscreenBtn" data-modal="kb">Fullscreen<\/button><button class="closeBtn" data-modal="kb">Close<\/button><\/div><\/div><div class="gameModal"><iframe class="gameIframe" data-modal="kb"><\/iframe><\/div><\/div><\/div>
+
+  <div id="erModal"><div class="gameWrap"><div class="gameHeader"><div>Escape Road<\/div><div><button class="fullscreenBtn" data-modal="er">Fullscreen<\/button><button class="closeBtn" data-modal="er">Close<\/button><\/div><\/div><div class="gameModal"><iframe class="gameIframe" data-modal="er"><\/iframe><\/div><\/div><\/div>
+
+  <div id="brModal"><div class="gameWrap"><div class="gameHeader"><div>Basketball Random<\/div><div><button class="fullscreenBtn" data-modal="br">Fullscreen<\/button><button class="closeBtn" data-modal="br">Close<\/button><\/div><\/div><div class="gameModal"><iframe class="gameIframe" data-modal="br"><\/iframe><\/div><\/div><\/div>
+  <div id="blModal"><div class="gameWrap"><div class="gameHeader"><div>Balatro</div><div><button class="fullscreenBtn" data-modal="bl">Fullscreen</button><button class="closeBtn" data-modal="bl">Close</button></div></div><div class="gameModal"><iframe class="gameIframe" data-modal="bl"></iframe></div></div></div>
+
+  <div id="ckModal"><div class="gameWrap"><div class="gameHeader"><div>Cookie Clicker</div><div><button class="fullscreenBtn" data-modal="ck">Fullscreen</button><button class="closeBtn" data-modal="ck">Close</button></div></div><div class="gameModal"><iframe class="gameIframe" data-modal="ck"></iframe></div></div></div>
+
+  <div id="jdModal"><div class="gameWrap"><div class="gameHeader"><div>Jelly Drift</div><div><button class="fullscreenBtn" data-modal="jd">Fullscreen</button><button class="closeBtn" data-modal="jd">Close</button></div></div><div class="gameModal"><iframe class="gameIframe" data-modal="jd"></iframe></div></div></div>
+
+  <div id="ukModal"><div class="gameWrap"><div class="gameHeader"><div>Ultrakill</div><div><button class="fullscreenBtn" data-modal="uk">Fullscreen</button><button class="closeBtn" data-modal="uk">Close</button></div></div><div class="gameModal"><iframe class="gameIframe" data-modal="uk"></iframe></div></div></div> 
+  
+  <div id="sbModal"><div class="gameWrap"><div class="gameHeader"><div>SandBoxels</div><div><button class="fullscreenBtn" data-modal="sb">Fullscreen</button><button class="closeBtn" data-modal="sb">Close</button></div></div><div class="gameModal"><iframe class="gameIframe" data-modal="sb"></iframe></div></div></div>
+  
+  <div id="spModal"><div class="gameWrap"><div class="gameHeader"><div>Space Waves</div><div><button class="fullscreenBtn" data-modal="sp">Fullscreen</button><button class="closeBtn" data-modal="sp">Close</button></div></div><div class="gameModal"><iframe class="gameIframe" data-modal="sp"></iframe></div></div></div>
+  
+   <div id="biModal"><div class="gameWrap"><div class="gameHeader"><div>Binding Of Isaac</div><div><button class="fullscreenBtn" data-modal="bi">Fullscreen</button><button class="closeBtn" data-modal="bi">Close</button></div></div><div class="gameModal"><iframe class="gameIframe" data-modal="bi"></iframe></div></div></div>
+   
+     <div id="rbModal"><div class="gameWrap"><div class="gameHeader"><div>Red Ball 4</div><div><button class="fullscreenBtn" data-modal="rb">Fullscreen</button><button class="closeBtn" data-modal="rb">Close</button></div></div><div class="gameModal"><iframe class="gameIframe" data-modal="rb"></iframe></div></div></div>
+     
+      <div id="tsModal"><div class="gameWrap"><div class="gameHeader"><div>Townscaper</div><div><button class="fullscreenBtn" data-modal="ts">Fullscreen</button><button class="closeBtn" data-modal="ts">Close</button></div></div><div class="gameModal"><iframe class="gameIframe" data-modal="ts"></iframe></div></div></div>
+      <div id="dmModal"><div class="gameWrap"><div class="gameHeader"><div>Drive Mad</div><div><button class="fullscreenBtn" data-modal="dm">Fullscreen</button><button class="closeBtn" data-modal="dm">Close</button></div></div><div class="gameModal"><iframe class="gameIframe" data-modal="dm"></iframe></div></div></div>
+      <div id="mcModal"><div class="gameWrap"><div class="gameHeader"><div>Minecraft</div><div><button class="fullscreenBtn" data-modal="mc">Fullscreen</button><button class="closeBtn" data-modal="mc">Close</button></div></div><div class="gameModal"><iframe class="gameIframe" data-modal="mc"></iframe></div></div></div>
+       <div id="mdModal"><div class="gameWrap"><div class="gameHeader"><div>10 Minutes till dawn</div><div><button class="fullscreenBtn" data-modal="md">Fullscreen</button><button class="closeBtn" data-modal="md">Close</button></div></div><div class="gameModal"><iframe class="gameIframe" data-modal="md"></iframe></div></div></div>
+    <div id="reModal"><div class="gameWrap"><div class="gameHeader"><div>Retro Bowl</div><div><button class="fullscreenBtn" data-modal="re">Fullscreen</button><button class="closeBtn" data-modal="re">Close</button></div></div><div class="gameModal"><iframe class="gameIframe" data-modal="re"></iframe></div></div></div>
+    <div id="drModal"><div class="gameWrap"><div class="gameHeader"><div>Deltarune</div><div><button class="fullscreenBtn" data-modal="dr">Fullscreen</button><button class="closeBtn" data-modal="dr">Close</button></div></div><div class="gameModal"><iframe class="gameIframe" data-modal="dr"></iframe></div></div></div>
+    <div id="csModal"><div class="gameWrap"><div class="gameHeader"><div>Clubby The Seal</div><div><button class="fullscreenBtn" data-modal="cs">Fullscreen</button><button class="closeBtn" data-modal="cs">Close</button></div></div><div class="gameModal"><iframe class="gameIframe" data-modal="cs"></iframe></div></div></div>
+    <div id="f1Modal"><div class="gameWrap"><div class="gameHeader"><div>Fnaf 1</div><div><button class="fullscreenBtn" data-modal="f1">Fullscreen</button><button class="closeBtn" data-modal="f1">Close</button></div></div><div class="gameModal"><iframe class="gameIframe" data-modal="f1"></iframe></div></div></div>
+    <div id="f2Modal"><div class="gameWrap"><div class="gameHeader"><div>Fnaf 2</div><div><button class="fullscreenBtn" data-modal="f2">Fullscreen</button><button class="closeBtn" data-modal="f2">Close</button></div></div><div class="gameModal"><iframe class="gameIframe" data-modal="f2"></iframe></div></div></div>
+    <div id="f3Modal"><div class="gameWrap"><div class="gameHeader"><div>Fnaf 3</div><div><button class="fullscreenBtn" data-modal="f3">Fullscreen</button><button class="closeBtn" data-modal="f3">Close</button></div></div><div class="gameModal"><iframe class="gameIframe" data-modal="f3"></iframe></div></div></div>
+    <div id="f4Modal"><div class="gameWrap"><div class="gameHeader"><div>Fnaf 4</div><div><button class="fullscreenBtn" data-modal="f4">Fullscreen</button><button class="closeBtn" data-modal="f4">Close</button></div></div><div class="gameModal"><iframe class="gameIframe" data-modal="f4"></iframe></div></div></div>
+    <div id="bbModal"><div class="gameWrap"><div class="gameHeader"><div>Baldis Basics</div><div><button class="fullscreenBtn" data-modal="bb">Fullscreen</button><button class="closeBtn" data-modal="bb">Close</button></div></div><div class="gameModal"><iframe class="gameIframe" data-modal="bb"></iframe></div></div></div>
+    <div id="rcModal"><div class="gameWrap"><div class="gameHeader"><div>Raldis Crackhouse</div><div><button class="fullscreenBtn" data-modal="rc">Fullscreen</button><button class="closeBtn" data-modal="rc">Close</button></div></div><div class="gameModal"><iframe class="gameIframe" data-modal="rc"></iframe></div></div></div>
+    <div id="feModal"><div class="gameWrap"><div class="gameHeader"><div>FNAE</div><div><button class="fullscreenBtn" data-modal="fe">Fullscreen</button><button class="closeBtn" data-modal="fe">Close</button></div></div><div class="gameModal"><iframe class="gameIframe" data-modal="fe"></iframe></div></div></div>
+    
+    <div id="dbModal"><div class="gameWrap"><div class="gameHeader"><div>Drift Boss</div><div><button class="fullscreenBtn" data-modal="db">Fullscreen</button><button class="closeBtn" data-modal="db">Close</button></div></div><div class="gameModal"><iframe class="gameIframe" data-modal="db"></iframe></div></div></div>
+    <div id="uyModal"><div class="gameWrap"><div class="gameHeader"><div>Undertale Yellow</div><div><button class="fullscreenBtn" data-modal="uy">Fullscreen</button><button class="closeBtn" data-modal="uy">Close</button></div></div><div class="gameModal"><iframe class="gameIframe" data-modal="uy"></iframe></div></div></div>
+    <div id="srModal"><div class="gameWrap"><div class="gameHeader"><div>Snow Rider</div><div><button class="fullscreenBtn" data-modal="sr">Fullscreen</button><button class="closeBtn" data-modal="sr">Close</button></div></div><div class="gameModal"><iframe class="gameIframe" data-modal="sr"></iframe></div></div></div>
+    <div id="prModal"><div class="gameWrap"><div class="gameHeader"><div>Helios</div><div><button class="fullscreenBtn" data-modal="pr">Fullscreen</button><button class="closeBtn" data-modal="pr">Close</button></div></div><div class="gameModal"><iframe class="gameIframe" data-modal="pr"></iframe></div></div></div>
+    <div id="dhModal"><div class="gameWrap"><div class="gameHeader"><div>Drift Hunters</div><div><button class="fullscreenBtn" data-modal="dh">Fullscreen</button><button class="closeBtn" data-modal="dh">Close</button></div></div><div class="gameModal"><iframe class="gameIframe" data-modal="dh"></iframe></div></div></div>
+    <div id="nbModal"><div class="gameWrap"><div class="gameHeader"><div>Nuts and Bolts Screwing Puzzle</div><div><button class="fullscreenBtn" data-modal="nb">Fullscreen</button><button class="closeBtn" data-modal="nb">Close</button></div></div><div class="gameModal"><iframe class="gameIframe" data-modal="nb"></iframe></div></div></div>
+    <div id="d2Modal"><div class="gameWrap"><div class="gameHeader"><div>Doge Miner 2</div><div><button class="fullscreenBtn" data-modal="d2">Fullscreen</button><button class="closeBtn" data-modal="d2">Close</button></div></div><div class="gameModal"><iframe class="gameIframe" data-modal="d2"></iframe></div></div></div>
+    <div id="pbModal"><div class="gameWrap"><div class="gameHeader"><div>Pinball</div><div><button class="fullscreenBtn" data-modal="pb">Fullscreen</button><button class="closeBtn" data-modal="pb">Close</button></div></div><div class="gameModal"><iframe class="gameIframe" data-modal="pb"></iframe></div></div></div>
+    <div id="acModal"><div class="gameWrap"><div class="gameHeader"><div>Adventure Capitalists</div><div><button class="fullscreenBtn" data-modal="ac">Fullscreen</button><button class="closeBtn" data-modal="ac">Close</button></div></div><div class="gameModal"><iframe class="gameIframe" data-modal="ac"></iframe></div></div></div>
+    <div id="bdModal"><div class="gameWrap"><div class="gameHeader"><div>Bacon May Die</div><div><button class="fullscreenBtn" data-modal="bd">Fullscreen</button><button class="closeBtn" data-modal="bd">Close</button></div></div><div class="gameModal"><iframe class="gameIframe" data-modal="bd"></iframe></div></div></div>
+    <div id="btModal"><div class="gameWrap"><div class="gameHeader"><div>Bad Time Simulator</div><div><button class="fullscreenBtn" data-modal="bt">Fullscreen</button><button class="closeBtn" data-modal="bt">Close</button></div></div><div class="gameModal"><iframe class="gameIframe" data-modal="bt"></iframe></div></div></div>
+    <div id="asModal"><div class="gameWrap"><div class="gameHeader"><div>Amazing Strange Rope Police</div><div><button class="fullscreenBtn" data-modal="as">Fullscreen</button><button class="closeBtn" data-modal="as">Close</button></div></div><div class="gameModal"><iframe class="gameIframe" data-modal="as"></iframe></div></div></div>
+    <div id="dlModal"><div class="gameWrap"><div class="gameHeader"><div>Duck Life Space</div><div><button class="fullscreenBtn" data-modal="dl">Fullscreen</button><button class="closeBtn" data-modal="dl">Close</button></div></div><div class="gameModal"><iframe class="gameIframe" data-modal="dl"></iframe></div></div></div>
+    <div id="buModal"><div class="gameWrap"><div class="gameHeader"><div>Buckshot Roulette</div><div><button class="fullscreenBtn" data-modal="bu">Fullscreen</button><button class="closeBtn" data-modal="bu">Close</button></div></div><div class="gameModal"><iframe class="gameIframe" data-modal="bu"></iframe></div></div></div>
+    <div id="clModal"><div class="gameWrap"><div class="gameHeader"><div>Clover Pit press space to interact most of time</div><div><button class="fullscreenBtn" data-modal="cl">Fullscreen</button><button class="closeBtn" data-modal="cl">Close</button></div></div><div class="gameModal"><iframe class="gameIframe" data-modal="cl"></iframe></div></div></div>
+    <div id="hkModal"><div class="gameWrap"><div class="gameHeader"><div>Hollow Knight</div><div><button class="fullscreenBtn" data-modal="hk">Fullscreen</button><button class="closeBtn" data-modal="hk">Close</button></div></div><div class="gameModal"><iframe class="gameIframe" data-modal="hk"></iframe></div></div></div>
+    <div id="teModal"><div class="gameWrap"><div class="gameHeader"><div>Terraria may break</div><div><button class="fullscreenBtn" data-modal="te">Fullscreen</button><button class="closeBtn" data-modal="te">Close</button></div></div><div class="gameModal"><iframe class="gameIframe" data-modal="te"></iframe></div></div></div>
+    <div id="thModal"><div class="gameWrap"><div class="gameHeader"><div>Thats Not My Neighbor</div><div><button class="fullscreenBtn" data-modal="th">Fullscreen</button><button class="closeBtn" data-modal="th">Close</button></div></div><div class="gameModal"><iframe class="gameIframe" data-modal="th"></iframe></div></div></div>
+    <div id="hrModal"><div class="gameWrap"><div class="gameHeader"><div>Highway Racer</div><div><button class="fullscreenBtn" data-modal="hr">Fullscreen</button><button class="closeBtn" data-modal="hr">Close</button></div></div><div class="gameModal"><iframe class="gameIframe" data-modal="hr"></iframe></div></div></div>
+    <div id="isModal"><div class="gameWrap"><div class="gameHeader"><div>Iron Snout</div><div><button class="fullscreenBtn" data-modal="is">Fullscreen</button><button class="closeBtn" data-modal="is">Close</button></div></div><div class="gameModal"><iframe class="gameIframe" data-modal="is"></iframe></div></div></div>
+    <div id="ptModal"><div class="gameWrap"><div class="gameHeader"><div>Poly Track</div><div><button class="fullscreenBtn" data-modal="pt">Fullscreen</button><button class="closeBtn" data-modal="pt">Close</button></div></div><div class="gameModal"><iframe class="gameIframe" data-modal="pt"></iframe></div></div></div>
+    <div id="f5Modal"><div class="gameWrap"><div class="gameHeader"><div>FNAE2</div><div><button class="fullscreenBtn" data-modal="f5">Fullscreen</button><button class="closeBtn" data-modal="f5">Close</button></div></div><div class="gameModal"><iframe class="gameIframe" data-modal="f5"></iframe></div></div></div>
+    <div id="smModal"><div class="gameWrap"><div class="gameHeader"><div>Stake Mines</div><div><button class="fullscreenBtn" data-modal="sm">Fullscreen</button><button class="closeBtn" data-modal="sm">Close</button></div></div><div class="gameModal"><iframe class="gameIframe" data-modal="sm"></iframe></div></div></div>
+  <!-- ↑ ADD NEW MODALS ABOVE THIS LINE -->
+
+  <script>
+    (function(){
+      const games = {
+        // ADD NEW GAMES HERE (example: fl: { modal: 'flModal', url: 'https://your-game-url.html' },)
+        cc: { modal: 'ccModal', url: 'https://rawcdn.githack.com/wegwegweg818-wq/idk/2b47014b8c2707eb32139c837ed807e0a01235ab/clcrazycars.html' },
+        er: { modal: 'erModal', url: 'https://rawcdn.githack.com/wegwegweg818-wq/idk/2b47014b8c2707eb32139c837ed807e0a01235ab/clescaperoad.html' },
+        ad: { modal: 'adModal', url: 'https://rawcdn.githack.com/wegwegweg818-wq/idk/2b47014b8c2707eb32139c837ed807e0a01235ab/clADOFAI.html' },
+        kb: { modal: 'kbModal', url: 'https://rawcdn.githack.com/wegwegweg818-wq/idk/2b47014b8c2707eb32139c837ed807e0a01235ab/clkartbros.html' },
+        br: { modal: 'brModal', url: 'https://rawcdn.githack.com/wegwegweg818-wq/idk/2b47014b8c2707eb32139c837ed807e0a01235ab/clbasketrandom.html' },
+        bl: { modal: 'blModal', url: 'https://rawcdn.githack.com/wegwegweg818-wq/idk/73d898c44cf860e6670246babec5e3609eff5ad5/index%20(1).html' },
+        ck: { modal: 'ckModal', url: 'https://rawcdn.githack.com/wegwegweg818-wq/idk/73d898c44cf860e6670246babec5e3609eff5ad5/clcookie-clicker.html' },
+        jd: { modal: 'jdModal', url: 'https://rawcdn.githack.com/genizy/web-port/b76984e373891dc5e22fb9a7f4f784671c620420/jelly-drift/index.html' },
+        uk: { modal: 'ukModal', url: 'https://rawcdn.githack.com/genizy/web-port/b76984e373891dc5e22fb9a7f4f784671c620420/ultrakill/index.html' },
+        sb: { modal: 'sbModal', url: 'https://rawcdn.githack.com/R74nCom/sandboxels/023712e34da6354afe2bd7fb33ddbe12fb974288/index.html' },
+        sp: { modal: 'spModal', url: 'https://rawcdn.githack.com/bubbls/UGS-Assets/d84a892372bc6e836fafbd784d9c12f83071b9e3/space%20waves/index.html' },
+        bi: { modal: 'biModal', url: 'https://rawcdn.githack.com/Thedetectiveseal/games-bc-yeah/636752e171843f473b50a9073961b335a1757658/cltboilambeternal.html' },
+        rb: { modal: 'rbModal', url: 'https://rawcdn.githack.com/Thedetectiveseal/games-bc-yeah/229fe1b4b9095555f7bbb23483c876ab25218958/clRedBall4.html' },
+        ts: { modal: 'tsModal', url: 'https://rawcdn.githack.com/Thedetectiveseal/games-bc-yeah/eb598c4e538ea2d60c119aeb5e669f0b78c49bfe/cltownscaper.html' },
+        dm: { modal: 'dmModal', url: 'https://rawcdn.githack.com/Thedetectiveseal/games-bc-yeah/f8da346b0597fa05f56122b598cde36c32535ef6/cldrivemady.html' },
+        mc: { modal: 'mcModal', url: 'https://rawcdn.githack.com/Thedetectiveseal/games-bc-yeah/fdf231af6326cf24bc67cf3aac1f83860513a652/minecraft.html' },
+        md: { modal: 'mdModal', url: 'https://rawcdn.githack.com/Thedetectiveseal/games-bc-yeah/7bb0a025b5578f24d11f00b37ed97739c591165c/cl10minutestildawn.html' },
+        re: { modal: 'reModal', url: 'https://rawcdn.githack.com/Thedetectiveseal/games-bc-yeah/45413e1c69b7dc0cab8fe79d162e23c46eb09254/clretrobowl.html' },
+        dr: { modal: 'drModal', url: 'https://rawcdn.githack.com/Thedetectiveseal/games-bc-yeah/45413e1c69b7dc0cab8fe79d162e23c46eb09254/cldeltarune.html' },
+        cs: { modal: 'csModal', url: 'https://rawcdn.githack.com/Thedetectiveseal/games-bc-yeah/a47ec35d90859e141a9d088df7c11562694cf764/clclubbytheseal.html' },
+        f1: { modal: 'f1Modal', url: 'https://rawcdn.githack.com/Thedetectiveseal/games-bc-yeah/2e8ca363401c13b74450df1baa3c7927d7d5992b/clFNAF.html' },
+        f2: { modal: 'f2Modal', url: 'https://rawcdn.githack.com/Thedetectiveseal/games-bc-yeah/2e8ca363401c13b74450df1baa3c7927d7d5992b/clFNAF2.html' },
+        f3: { modal: 'f3Modal', url: 'https://rawcdn.githack.com/Thedetectiveseal/games-bc-yeah/2e8ca363401c13b74450df1baa3c7927d7d5992b/clFNAF3.html' },
+        f4: { modal: 'f4Modal', url: 'https://rawcdn.githack.com/Thedetectiveseal/games-bc-yeah/2e8ca363401c13b74450df1baa3c7927d7d5992b/clFNAF4.html' },
+        bb: { modal: 'bbModal', url: 'https://rawcdn.githack.com/Thedetectiveseal/games-bc-yeah/2e8ca363401c13b74450df1baa3c7927d7d5992b/clbaldisbasics.html' },
+        rc: { modal: 'rcModal', url: 'https://rawcdn.githack.com/Thedetectiveseal/games-bc-yeah/485953d1b73b3f2d880b4ea9381b9cae2cce464a/clraldiscrackhouse.html' },
+        fe: { modal: 'feModal', url: 'https://rawcdn.githack.com/Thedetectiveseal/games-bc-yeah/a58bf1d46513581f7cc79aaf2640e4597a828ef2/clfivenightsatepsteins.html' },
+        db: { modal: 'dbModal', url: 'https://rawcdn.githack.com/Thedetectiveseal/games-bc-yeah/9fa92a1f1e448d6141e0f3bdb650f7da14ac35f9/cldriftboss.html' },
+        uy: { modal: 'uyModal', url: 'https://rawcdn.githack.com/Thedetectiveseal/games-bc-yeah/9fa92a1f1e448d6141e0f3bdb650f7da14ac35f9/clundertaleyellow.html' },
+        sr: { modal: 'srModal', url: 'https://rawcdn.githack.com/Thedetectiveseal/games-bc-yeah/9fa92a1f1e448d6141e0f3bdb650f7da14ac35f9/clsnowrider.html' },
+        pr: { modal: 'prModal', url: 'https://rawcdn.githack.com/kbzix/yn/b8cfeb65018f566eabf0b69790330871d35d0ad6/Offline-File/Helios-Offline.html' },
+        dh: { modal: 'dhModal', url: 'https://rawcdn.githack.com/Thedetectiveseal/games-bc-yeah/70b75b93823831afd911b9b8f6c50c11dda7b328/cldrifthuntersmerge.html' },
+        nb: { modal: 'nbModal', url: 'https://rawcdn.githack.com/Thedetectiveseal/games-bc-yeah/main/clNutsandBoltsScrewingPuzzle.html' },
+        d2: { modal: 'd2Modal', url: 'https://rawcdn.githack.com/Thedetectiveseal/games-bc-yeah/main/cldogeminer2.html' },
+        pb: { modal: 'pbModal', url: 'https://rawcdn.githack.com/Thedetectiveseal/games-bc-yeah/e711ecf0dbe3fd1b88c8ffaa3fe1945a283a33cf/cl3dpinballspacecadet.html' },
+        ac: { modal: 'acModal', url: 'https://rawcdn.githack.com/Thedetectiveseal/games-bc-yeah/e711ecf0dbe3fd1b88c8ffaa3fe1945a283a33cf/clAdventureCapatalist.html' },
+        bd: { modal: 'bdModal', url: 'https://rawcdn.githack.com/Thedetectiveseal/games-bc-yeah/e711ecf0dbe3fd1b88c8ffaa3fe1945a283a33cf/clbaconmaydie.html' },
+        bt: { modal: 'btModal', url: 'https://rawcdn.githack.com/Thedetectiveseal/games-bc-yeah/e711ecf0dbe3fd1b88c8ffaa3fe1945a283a33cf/clbadtimesim.html' },
+        as: { modal: 'asModal', url: 'https://rawcdn.githack.com/Thedetectiveseal/games-bc-yeah/main/clstreangeropepolice.html' },
+        dl: { modal: 'dlModal', url: 'https://rawcdn.githack.com/Thedetectiveseal/games-bc-yeah/main/clducklifespace.html' },
+        bu: { modal: 'buModal', url: 'https://rawcdn.githack.com/Thedetectiveseal/games-bc-yeah/76723c415521b451e00a1de8387583b0ff254e46/Buckshot%20Roulette.html' },
+        cl: { modal: 'clModal', url: 'https://rawcdn.githack.com/Thedetectiveseal/games-bc-yeah/76723c415521b451e00a1de8387583b0ff254e46/Clover%20Pit.html' },
+        hk: { modal: 'hkModal', url: 'https://rawcdn.githack.com/Thedetectiveseal/games-bc-yeah/76723c415521b451e00a1de8387583b0ff254e46/Hollow%20Knight.html' },
+        te: { modal: 'teModal', url: 'https://rawcdn.githack.com/Thedetectiveseal/games-bc-yeah/76723c415521b451e00a1de8387583b0ff254e46/Terraria.html' },
+        th: { modal: 'thModal', url: 'https://rawcdn.githack.com/Thedetectiveseal/games-bc-yeah/76723c415521b451e00a1de8387583b0ff254e46/That%27s%20Not%20My%20Neighbor.html' },
+        hr: { modal: 'hrModal', url: 'https://rawcdn.githack.com/Thedetectiveseal/games-bc-yeah/2a5091a4a64c3c56ddc78aea0441d7cf15585f5b/Highway%20Racer.html' },
+        is: { modal: 'isModal', url: 'https://rawcdn.githack.com/Thedetectiveseal/games-bc-yeah/2a5091a4a64c3c56ddc78aea0441d7cf15585f5b/clironsnout.html' },
+        pt: { modal: 'ptModal', url: 'https://rawcdn.githack.com/deanwatson2030-cpu/egewgre/8f3e8c15d17d767d968a5bed4ce9faafc23b9026/Poly%20Track.html' },
+        f5: { modal: 'f5Modal', url: 'https://raw.githack.com/deanwatson2030-cpu/egw/main/Five%20Nights%20at%20Last%20Breath.html' },
+        sm: { modal: 'smModal', url: 'https://rawcdn.githack.com/deanwatson2030-cpu/egw/8f62431c80b55651faf33da5292ba9821c9d0805/stake_mines.html' }
+        // ↑ ADD NEW GAMES ABOVE THIS LINE (Note: last item should NOT have a comma)
+      };
+
+      const modals = ['ccModal', 'erModal', 'adModal', 'kbModal', 'brModal', 'blModal', 'ckModal', 'jdModal', 'ukModal', 'sbModal', 'spModal', 'biModal', 'rbModal', 'tsModal', 'dmModal', 'mcModal', 'mdModal', 'reModal', 'drModal', 'csModal', 'f1Modal', 'f2Modal', 'f3Modal', 'f4Modal', 'bbModal', 'rcModal', 'feModal', 'dbModal', 'uyModal', 'srModal', 'prModal', 'dhModal', 'nbModal', 'd2Modal', 'pbModal', 'acModal', 'bdModal', 'btModal', 'asModal', 'dlModal', 'buModal', 'clModal', 'hkModal', 'teModal', 'thModal' ,'hrModal', 'isModal', 'ptModal', 'f5Modal', 'smModal' ];
+      // ↑ ADD NEW MODAL IDS TO THE ARRAY ABOVE (example: add 'flModal' if you added a flappy bird game)
+      const playArea = document.getElementById('playArea');
+      const closeGameBtn = document.getElementById('closeGameBtn');
+      
+      // Store references to auto-opened windows
+      const autoOpenedWindows = {};
+      const autoOpenGames = ['fl', 'ck', 'jd', 'uk']; // Balatro, Cookie Clicker, Jelly Drift, Ultrakill
+      let currentGameKey = null;
+      
+      function preventCloseKey(e) {
+        if ((e.ctrlKey || e.metaKey) && e.key === 'w') {
+          e.preventDefault();
+          e.stopImmediatePropagation();
+          return false;
+        }
+      }
+
+      function hideAllModals() {
+        modals.forEach(id => document.getElementById(id).style.display = 'none');
+        playArea.style.display = 'none';
+        closeGameBtn.style.display = 'none';
+      }
+      
+      function closeAutoOpenedWindows() {
+        autoOpenGames.forEach(gameKey => {
+          if (autoOpenedWindows[gameKey]) {
+            try {
+              autoOpenedWindows[gameKey].close();
+            } catch (e) {}
+            delete autoOpenedWindows[gameKey];
+          }
+        });
+      }
+
+      function loadGame(gameKey) {
+        closeAutoOpenedWindows();
+        hideAllModals();
+        const game = games[gameKey];
+        const modal = document.getElementById(game.modal);
+        const iframe = document.querySelector('.gameIframe[data-modal="' + gameKey + '"]');
+        modal.style.display = 'flex';
+        iframe.src = game.url;
+        currentGameKey = gameKey;
+        
+        // Prevent Ctrl+W for Ultrakill
+        if (gameKey === 'uk') {
+          window.addEventListener('keydown', preventCloseKey, true);
+        } else {
+          window.removeEventListener('keydown', preventCloseKey, true);
+        }
+      }
+
+      document.querySelectorAll('button[data-game]').forEach(btn => {
+        btn.addEventListener('click', () => loadGame(btn.dataset.game));
+      });
+
+      document.getElementById('btnBasketball').addEventListener('click', () => {
+        closeAutoOpenedWindows();
+        hideAllModals();
+        document.getElementById('gameFrame').src = 'https://basketball-stars.gitlab.io/';
+        playArea.style.display = 'block';
+        closeGameBtn.style.display = 'inline-block';
+      });
+
+      document.getElementById('btnSeraph').addEventListener('click', () => {
+        closeAutoOpenedWindows();
+        hideAllModals();
+        document.getElementById('gameFrame').src = 'https://cubeguide.github.io/econclasshelp/games/index.html';
+        playArea.style.display = 'block';
+        closeGameBtn.style.display = 'inline-block';
+      });
+
+      closeGameBtn.addEventListener('click', () => {
+        document.getElementById('gameFrame').src = '';
+        playArea.style.display = 'none';
+        closeGameBtn.style.display = 'none';
+      });
+
+      document.querySelectorAll('.closeBtn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const gameKey = btn.dataset.modal;
+          document.querySelector('.gameIframe[data-modal="' + gameKey + '"]').src = '';
+          document.getElementById(games[gameKey].modal).style.display = 'none';
+        });
+      });
+
+      document.querySelectorAll('.fullscreenBtn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const gameKey = btn.dataset.modal;
+          const wrap = document.querySelector('#' + games[gameKey].modal + ' .gameWrap');
+          if (wrap.requestFullscreen) wrap.requestFullscreen();
+          else if (wrap.webkitRequestFullscreen) wrap.webkitRequestFullscreen();
+        });
+      });
+
+      modals.forEach(modalId => {
+        document.getElementById(modalId).addEventListener('click', (e) => {
+          if (e.target.id === modalId) {
+            const gameKey = Object.keys(games).find(k => games[k].modal === modalId);
+            document.querySelector('.closeBtn[data-modal="' + gameKey + '"]').click();
+          }
+        });
+      });
+      
+      // Auto-open windows on page load - DISABLED
+      // window.addEventListener('load', () => {
+      //   autoOpenGames.forEach(gameKey => {
+      //     const game = games[gameKey];
+      //     try {
+      //       autoOpenedWindows[gameKey] = window.open(game.url, 'game_' + gameKey, 'width=1024,height=768');
+      //     } catch (e) {}
+      //   });
+      // });
+    })();
+  <\/script>
+      <script>
+        window.addEventListener('beforeunload', function (event) {
+            event.preventDefault();
+            event.returnValue = '';
+            return 'Are you sure you want to leave? Any unsaved changes will be lost.';
+        });
+    <\/script>
+<\/body>
+<\/html>`;
+
+    const win = window.open('about:blank', '_blank');
+    if (!win) {
+        alert('Pop-up blocked! Please disable pop-up blocker.');
+        return;
+    }
+    const cleanContent = content.replace(/\\\//g, '/');
+    win.document.open();
+    win.document.write(cleanContent);
+    win.document.close();
+}
+    </script>
+</head>
+  <div style="display:flex;min-height:100vh;align-items:center;justify-content:center;flex-direction:column;gap:12px">
+    <button onclick="openInBlank()" style="padding:12px 18px;border-radius:8px;background:linear-gradient(#6dd5fa,#2193b0);border:none;cursor:pointer;font-size:16px;color:white;font-weight:bold;">Open Site</button>
+    <div style="font-size:12px;color:#222">When you open the site, it calculates all the equations and displays them, reload for the most accurate equations
+  </div>
+  </div>
+</body>
+</html>
