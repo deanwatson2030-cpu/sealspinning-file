@@ -1,2 +1,2 @@
 # sealspinning-file
-download this for the single file
+download single.html for the funny stuff or seals
