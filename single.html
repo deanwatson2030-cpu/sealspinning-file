@@ -87,7 +87,7 @@ function openInBlank() {
     #closeGameBtn {
       display: none;
     }
-    #ccModal, #erModal, #adModal, #kbModal, #brModal, #blModal, #ckModal, #jdModal, #ukModal, #sbModal, #spModal, #biModal, #rbModal, #tsModal, #dmModal, #mcModal, #mdModal, #reModal, #drModal, #csModal, #f1Modal, #f2Modal, #f3Modal, #f4Modal, #bbModal, #rcModal, #feModal, #dbModal, #uyModal, #srModal, #prModal, #dhModal, #nbModal, #d2Modal, #pbModal, #acModal, #bdModal, #btModal, #asModal, #dlModal, #buModal, #clModal, #hkModal, #teModal, #thModal, #hrModal, #isModal, #ptModal, #f5Modal, #smModal, #rlModal {
+    #ccModal, #erModal, #adModal, #kbModal, #brModal, #blModal, #ckModal, #jdModal, #ukModal, #sbModal, #spModal, #biModal, #rbModal, #tsModal, #dmModal, #mcModal, #mdModal, #reModal, #drModal, #csModal, #f1Modal, #f2Modal, #f3Modal, #f4Modal, #bbModal, #rcModal, #feModal, #dbModal, #uyModal, #srModal, #prModal, #dhModal, #nbModal, #d2Modal, #pbModal, #acModal, #bdModal, #btModal, #asModal, #dlModal, #buModal, #clModal, #hkModal, #teModal, #thModal, #hrModal, #isModal, #ptModal, #f5Modal, #smModal, #rlModal, #icModal {
       display: none;
       position: fixed;
       inset: 0;
@@ -228,6 +228,7 @@ function openInBlank() {
     <button id="btnFNAE2" data-game="f5">FNAE 2<\/button>
     <button id="btnStakeMines" data-game="sm">Stake Mines<\/button>
     <button id="btnRocketLeague" data-game="rl">Rocket League<\/button>
+    <button id="btnInfiniteCraft" data-game="ic">Infinite Craft<\/button>
     <!-- ↑ ADD NEW BUTTONS ABOVE THIS LINE (Keep data-game matching the key in games object) -->
   <\/section>
 
@@ -303,6 +304,7 @@ function openInBlank() {
     <div id="f5Modal"><div class="gameWrap"><div class="gameHeader"><div>FNAE2</div><div><button class="fullscreenBtn" data-modal="f5">Fullscreen</button><button class="closeBtn" data-modal="f5">Close</button></div></div><div class="gameModal"><iframe class="gameIframe" data-modal="f5"></iframe></div></div></div>
     <div id="smModal"><div class="gameWrap"><div class="gameHeader"><div>Stake Mines</div><div><button class="fullscreenBtn" data-modal="sm">Fullscreen</button><button class="closeBtn" data-modal="sm">Close</button></div></div><div class="gameModal"><iframe class="gameIframe" data-modal="sm"></iframe></div></div></div>
     <div id="rlModal"><div class="gameWrap"><div class="gameHeader"><div>Rocket League</div><div><button class="fullscreenBtn" data-modal="rl">Fullscreen</button><button class="closeBtn" data-modal="rl">Close</button></div></div><div class="gameModal"><iframe class="gameIframe" data-modal="rl"></iframe></div></div></div>
+    <div id="icModal"><div class="gameWrap"><div class="gameHeader"><div>Infinite Craft</div><div><button class="fullscreenBtn" data-modal="ic">Fullscreen</button><button class="closeBtn" data-modal="ic">Close</button></div></div><div class="gameModal"><iframe class="gameIframe" data-modal="ic"></iframe></div></div></div>
   <!-- ↑ ADD NEW MODALS ABOVE THIS LINE -->
 
   <script>
@@ -359,11 +361,12 @@ function openInBlank() {
         pt: { modal: 'ptModal', url: 'https://rawcdn.githack.com/deanwatson2030-cpu/egewgre/8f3e8c15d17d767d968a5bed4ce9faafc23b9026/Poly%20Track.html' },
         f5: { modal: 'f5Modal', url: 'https://raw.githack.com/deanwatson2030-cpu/egw/main/Five%20Nights%20at%20Last%20Breath.html' },
         sm: { modal: 'smModal', url: 'https://rawcdn.githack.com/deanwatson2030-cpu/egw/8f62431c80b55651faf33da5292ba9821c9d0805/stake_mines.html' },
-        rl: { modal: 'rlModal', url: 'https://rawcdn.githack.com/deanwatson2030-cpu/egw/120b440fc4492f6d46a28f6f9834e8588bc20276/rocket_league%20(1).html' }
+        rl: { modal: 'rlModal', url: 'https://rawcdn.githack.com/deanwatson2030-cpu/egw/120b440fc4492f6d46a28f6f9834e8588bc20276/rocket_league%20(1).html' },
+        ic: { modal: 'icModal', url: 'https://rawcdn.githack.com/deanwatson2030-cpu/egw/fa676661a8f330a2b67ba8021008b771e5126921/clinfinitecraft.html' }
         // ↑ ADD NEW GAMES ABOVE THIS LINE (Note: last item should NOT have a comma)
       };
 
-      const modals = ['ccModal', 'erModal', 'adModal', 'kbModal', 'brModal', 'blModal', 'ckModal', 'jdModal', 'ukModal', 'sbModal', 'spModal', 'biModal', 'rbModal', 'tsModal', 'dmModal', 'mcModal', 'mdModal', 'reModal', 'drModal', 'csModal', 'f1Modal', 'f2Modal', 'f3Modal', 'f4Modal', 'bbModal', 'rcModal', 'feModal', 'dbModal', 'uyModal', 'srModal', 'prModal', 'dhModal', 'nbModal', 'd2Modal', 'pbModal', 'acModal', 'bdModal', 'btModal', 'asModal', 'dlModal', 'buModal', 'clModal', 'hkModal', 'teModal', 'thModal' ,'hrModal', 'isModal', 'ptModal', 'f5Modal', 'smModal', 'rlModal' ];
+      const modals = ['ccModal', 'erModal', 'adModal', 'kbModal', 'brModal', 'blModal', 'ckModal', 'jdModal', 'ukModal', 'sbModal', 'spModal', 'biModal', 'rbModal', 'tsModal', 'dmModal', 'mcModal', 'mdModal', 'reModal', 'drModal', 'csModal', 'f1Modal', 'f2Modal', 'f3Modal', 'f4Modal', 'bbModal', 'rcModal', 'feModal', 'dbModal', 'uyModal', 'srModal', 'prModal', 'dhModal', 'nbModal', 'd2Modal', 'pbModal', 'acModal', 'bdModal', 'btModal', 'asModal', 'dlModal', 'buModal', 'clModal', 'hkModal', 'teModal', 'thModal' ,'hrModal', 'isModal', 'ptModal', 'f5Modal', 'smModal', 'rlModal', 'icModal' ];
       // ↑ ADD NEW MODAL IDS TO THE ARRAY ABOVE (example: add 'flModal' if you added a flappy bird game)
       const playArea = document.getElementById('playArea');
       const closeGameBtn = document.getElementById('closeGameBtn');
